@@ -4,8 +4,10 @@
 
 
 def caesar_cipher(string, shift)
-  p array = string.chars.map(&:ord)
-
+  ord_array = string.chars.map(&:ord)
+  ord_array.each do |num|
+    p num
+  end
 end
 
 p caesar_cipher("test", 5)
