@@ -4,7 +4,8 @@
 
 
 def caesar_cipher(string, shift)
-  string
+  p array = string.chars.map(&:ord)
+
 end
 
 p caesar_cipher("test", 5)
