@@ -4,10 +4,12 @@
 
 
 def caesar_cipher(string, shift)
+  shifted_word = []
   ord_array = string.chars.map(&:ord)
   ord_array.each do |num|
-    p num
+    shifted_word << (num + shift).chr
   end
+  shifted_word.join
 end
 
 p caesar_cipher("test", 5)
