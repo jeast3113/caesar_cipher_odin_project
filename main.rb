@@ -6,13 +6,20 @@
 def caesar_cipher(string, shift)
   base_upper_A = "A".ord
   base_lower_a = "a".ord
-  alpha_base = 26 # number of letters in alphabet
+  alpha_base = 26 # number of letters in alphabet - will use as a modulo base
 
-  p base_upper_A
-  p base_lower_a
+  # base_upper_A
+  # base_lower_a
+
+  num = "Z".ord # example for math algorithm - number should be '66'
+  shift = 5
+  # num
+
+  # test math algorithm for getting number for chr
+  p ((num - base_upper_A + shift) % alpha_base + base_upper_A).chr
 
   shifted_word = []
-  p ord_array = string.chars.map(&:ord)
+  ord_array = string.chars.map(&:ord)
   ord_array.each do |num|
     #shifted_number = num + shift # update this and separate it from 'A' and 'a'
     if num == 32 # keep this for spacing in strings
@@ -24,9 +31,7 @@ def caesar_cipher(string, shift)
   shifted_word.join
 end
 
-p caesar_cipher("What a string!", 5)
-# p 122 - 97 # = 25
-# p "A".ord
-# p "Z".ord
-# p 90 - 65 + 1
+caesar_cipher("What a string!", 5)
+
+
 
