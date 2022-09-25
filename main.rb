@@ -7,11 +7,9 @@ def caesar_cipher(string, shift)
   base_upper_A = "A".ord
   base_lower_a = "a".ord
   alpha_base = 26 # number of letters in alphabet - will use as a modulo base
-
   shifted_word = []
   ord_array = string.chars.map(&:ord)
   ord_array.each do |num|
-    #shifted_number = num + shift # update this and separate it from 'A' and 'a'
     if num == 32 # keep this for spacing in strings
       shifted_word << " "
     elsif num >= "A".ord && num <= "Z".ord
@@ -27,7 +25,7 @@ def caesar_cipher(string, shift)
   shifted_word.join
 end
 
-p caesar_cipher("Zebras are fast in water!", 9)
+p caesar_cipher("ZeBras arE faSt in wAtEr!", 9)
 
 
 
