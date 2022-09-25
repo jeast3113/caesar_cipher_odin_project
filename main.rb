@@ -7,11 +7,12 @@ def caesar_cipher(string, shift)
   shifted_word = []
   p ord_array = string.chars.map(&:ord)
   ord_array.each do |num|
-    shifted_word << (num + shift).chr
+    if num >= 97 && num <= 122
+      p shifted_word << (num + shift)
+    end
   end
   shifted_word.join
 end
 
-# p caesar_cipher("zzz", 5)
-p "a".ord
-p "z".ord
+p caesar_cipher("zzz", 5)
+
