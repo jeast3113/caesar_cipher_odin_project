@@ -23,7 +23,7 @@ def caesar_cipher(string, shift)
   shifted_word.join
 end
 
-p caesar_cipher("What a string!", 5)
+p caesar_cipher("zzzzzZZZZ!?@?", 1)
 # p 122 - 97 # = 25
 # p "A".ord
 # p "Z".ord
