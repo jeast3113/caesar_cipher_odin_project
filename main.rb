@@ -10,12 +10,6 @@ def caesar_cipher(string, shift)
     shifted_number = num + shift
     if num == 32
       shifted_word << " "
-    elsif (shifted_number >= 90 && shifted_number <= 97)
-      shifted_word << (shifted_number - 26).chr
-    # elsif (shifted_number > 122)
-    #   shifted_word << (shifted_number - 26).chr
-    elsif (shifted_number >= 65 && shifted_number <= 90) || (shifted_number >= 97 && shifted_number <= 122)
-      shifted_word << (shifted_number).chr
     else
       shifted_word << num.chr
     end
