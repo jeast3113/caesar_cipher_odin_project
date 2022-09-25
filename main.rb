@@ -19,4 +19,7 @@ end
 
 p caesar_cipher("zzz", 1)
 # p 122 - 97 # = 25
+p "A".ord
+p "Z".ord
+p 90 - 65 + 1
 
