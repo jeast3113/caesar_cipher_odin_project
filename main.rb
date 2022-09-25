@@ -5,17 +5,19 @@
 
 def caesar_cipher(string, shift)
   shifted_word = []
-  p ord_array = string.chars.map(&:ord)
+  ord_array = string.chars.map(&:ord)
   ord_array.each do |num|
-    p shifted_number = num + shift
+    shifted_number = num + shift
     if num == 32
       shifted_word << " "
     elsif shifted_number > 90 && shifted_number < 97
-      p shifted_word << (shifted_number - 26).chr
+      shifted_word << (shifted_number - 26).chr
     elsif shifted_number > 122
       shifted_word << (shifted_number - 26).chr
     elsif num >= 97 && num <= 122
       shifted_word << (shifted_number).chr
+    else
+      shifted_word << num.chr
     end
   end
   shifted_word.join
